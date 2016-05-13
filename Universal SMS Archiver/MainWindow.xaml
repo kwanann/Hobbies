@@ -1,0 +1,45 @@
+﻿<Window x:Class="Universal_SMS_Archiver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Universal_SMS_Archiver"
+        mc:Ignorable="d"
+        Title="Universal SMS Archiver" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Menu Width="Auto" Grid.Row="0">
+            <MenuItem Header="_File">
+                <MenuItem Header="_Import">
+                    <MenuItem Header="_iTunes Backup" HorizontalAlignment="Left" Click="Menu_File_Import_iTunes_Backup_Click" />
+                    <MenuItem Header="_SMS Backup and Restore" HorizontalAlignment="Left" Click="Menu_File_Import_SMS_Backup_And_Restore_Click" />
+                </MenuItem>
+                <MenuItem Header="_Reload From Disk" Click="Menu_File_Reload_From_Disk_Click" />
+                <MenuItem Header="_Export as Excel" Click="Menu_File_Export_As_Excel_Click">
+                </MenuItem>
+                <MenuItem Header="E_xit" HorizontalAlignment="Left" Click="Menu_File_Exit_Click" />
+            </MenuItem>
+            <MenuItem Header="_Tools">
+                <MenuItem Header="_Options" HorizontalAlignment="Left"/>
+            </MenuItem>
+            <MenuItem Header="_Help">
+                <MenuItem Header="_About" HorizontalAlignment="Left"/>
+            </MenuItem>
+        </Menu>
+        <TabControl Grid.Row="1">
+            <TabItem Header="Current">
+                <DataGrid x:Name="DG" IsReadOnly="True" AlternatingRowBackground="#FFCCCDD3" CanUserDeleteRows="False" KeyUp="DG_KeyUp"/>
+            </TabItem>
+            <TabItem Header="Archived">
+                <DataGrid x:Name="DG_Archived" IsReadOnly="True" AlternatingRowBackground="#FFCCCDD3" CanUserDeleteRows="False" KeyUp="DG_KeyUp"/>
+            </TabItem>
+        </TabControl>
+        <StatusBar Grid.Row="2">
+            <StatusBarItem x:Name="lbl" Content="Status" />
+        </StatusBar>
+    </Grid>
+</Window>

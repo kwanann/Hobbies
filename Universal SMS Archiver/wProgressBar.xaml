@@ -1,0 +1,17 @@
+﻿<Window x:Class="Universal_SMS_Archiver.wProgressBar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Universal_SMS_Archiver"
+        mc:Ignorable="d"
+        Title="Progress" Height="200" Width="300" ShowInTaskbar="False" WindowStyle="ToolWindow">
+    <StackPanel>
+        <local:BusyDecorator IsBusyIndicatorShowing="true" x:Name="theBusyIndicator">
+            <StackPanel>
+                <ProgressBar x:Name="theProgressBar" SmallChange="0" Value="50" Height="20" />
+                <Label x:Name="lbl" Content="text"/>
+            </StackPanel>
+        </local:BusyDecorator>
+    </StackPanel>
+</Window>

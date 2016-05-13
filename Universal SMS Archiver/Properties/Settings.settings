@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Universal_SMS_Archiver.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="BackingFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sms.txt</Value>
+    </Setting>
+    <Setting Name="DefaultCountryCode" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">+65</Value>
+    </Setting>
+    <Setting Name="TrimMobileNumber" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ArchiveBackingFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sms_archive.txt</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
