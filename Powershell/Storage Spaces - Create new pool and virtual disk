@@ -1,0 +1,4 @@
+$PhysicalDisks = (Get-PhysicalDisk -CanPool $True)
+New-StoragePool –FriendlyName "Archive Pool" -StorageSubSystemFriendlyName "Windows Storage*" –PhysicalDisks $PhysicalDisks
+
+New-VirtualDisk -StoragePoolFriendlyName "Archive Pool" -FriendlyName "Archive Virtual Disk" -ResiliencySettingName Mirror -NumberOfDataCopies 3 -UseMaximumSize
